@@ -1,0 +1,75 @@
+[R1] La CPU debe implementarse dentro del subcircuito CPU del archivo
+circuit/smips.circ entregado, usando Logisim Evolution 5.0.0.
+
+[R2] No deben modificarse los circuitos Board ni Memory. En el subcircuito CPU no deben
+cambiarse el nombre, el ancho ni el sentido de sus pines, ni borrarse y volver a crearse
+un pin, ni modificarse su apariencia (Proyecto → Editar apariencia del circuito). Los
+pines sí pueden moverse de sitio dentro del circuito CPU.
+
+[R3] Todos los elementos secuenciales de la CPU deben actualizarse en el flanco de subida
+de CLK, conectados directamente a CLK. No deben generarse relojes derivados (ninguna
+lógica en el camino del reloj).
+
+[R4] TTY_WE debe valer 1 durante exactamente un flanco de subida por cada carácter
+impreso, y 0 en cualquier otro momento.
+
+[R5] MEM_WE debe valer 1 solo en el ciclo en que se ejecuta la escritura de un sw o un sb.
+
+[R6] Mientras RESET = 1, la CPU debe quedar en su estado inicial: PC = 0, $gp = 0x1800,
+$sp = 0x3FFC, los otros 30 registros a 0 y la unidad de control en su estado inicial, con
+MEM_WE, TTY_WE y HALT a 0. Al pasar RESET a 0, la CPU debe comenzar a ejecutar la
+instrucción de la dirección 0x0000. El reset puede ser asíncrono (entradas de borrado
+de los registros) o síncrono.
+
+[R7] El reset no debe modificar la memoria. El programa se carga en la RAM antes de
+pulsar Reset.
+
+[R8] La CPU debe ejecutar las 23 instrucciones de S-MIPS con la semántica de la tabla
+anterior.
+
+[R9] La CPU debe ejecutar addu exactamente como add y addiu exactamente como addi.
+Motivo: MARS traduce las pseudoinstrucciones move y li a addu y addiu, que no
+pertenecen a S-MIPS.
+
+[R10] Una palabra cuyo par (op, funct) no aparece en la tabla es una instrucción ilegal: la
+CPU debe detenerse como con syscall 10 (HALT = 1, sin modificar ningún estado).
+La palabra 0x00000000 es sll $zero, $zero, 0 (nop): es legal y no tiene efecto.
+
+[R11] La instrucción se identifica solo por op y, si op = 0, por funct. No es obligatorio
+comprobar que los campos no usados valgan 0.
+
+[R12] La CPU debe ser multiciclo: cada instrucción se ejecuta en varios ciclos de reloj, una
+sola instrucción a la vez (no se permite segmentación ni ejecutar dos instrucciones en
+paralelo). El número de ciclos puede variar según la instrucción.
+
+[R13] Se usa la única memoria de la placa para instrucciones y datos. La instrucción en curso
+debe guardarse en un registro de instrucción (IR) durante todos sus ciclos.
+
+[R14] La ruta de datos debe tener una sola ALU y ningún otro sumador: el cálculo de
+PC + 4, de los destinos de salto y de las direcciones de memoria se hace con esa ALU
+en ciclos distintos. Se permite un comparador de igualdad en Branch_Control como
+alternativa a la salida zero de la ALU.
+
+[R15] La secuencia de ciclos la gobierna una máquina de estados síncrona dentro de
+Control_Unit, construida con biestables o registros (el estado) y lógica combinacional
+(próximo estado y salidas). Puede ser de tipo Moore o Mealy, y la codificación de los
+estados es libre.
+
+[R16] Deben existir los seis subcircuitos anteriores, con esos nombres y esa jerarquía, y cada
+uno debe cumplir su función mínima.
+
+[R17] Dentro de la CPU no se permiten los componentes RAM ni ROM de Logisim. En particular, si Register_File se implementa como circuito, debe construirse con registros
+o biestables, multiplexores y decodificadores.
+
+[R18] A lo sumo dos de los tres subcircuitos Register_File, ALU e Instruction_Decoder,
+a elección del estudiante, pueden implementarse como entidades VHDL de Logisim
+(ninguno, uno o dos). Los demás, y todo el resto de la CPU, deben ser circuitos de
+Logisim. No puede haber ningún otro código VHDL en la CPU.
+
+[R19] Cada entidad VHDL debe llamarse como el subcircuito que sustituye (Register_File,
+ALU o Instruction_Decoder; VHDL no distingue mayúsculas). Sus puertos deben ser
+solo de tipo std_logic o std_logic_vector, sin generics. Puede usar únicamente
+las bibliotecas ieee.std_logic_1164 e ieee.numeric_std, y debe compilar como
+VHDL-2002 sin errores ni avisos.
+
+[R20] Las entidades VHDL deben ser descriptivas y sintetizables: no se permiten wait, retardos (after), archivos ni instrucciones de simulación.
