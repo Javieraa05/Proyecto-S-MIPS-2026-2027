@@ -19,7 +19,7 @@
   <lib desc="#BFH-Praktika" name="10"/>
   <lib desc="#Input/Output-Extra" name="11"/>
   <lib desc="#Soc" name="12"/>
-  <main name="main"/>
+  <main name="ALU"/>
   <options>
     <a name="gateUndefined" val="ignore"/>
     <a name="simlimit" val="1000"/>
@@ -53,20 +53,20 @@
     <tool name="D Flip-Flop"/>
     <tool name="Register"/>
   </toolbar>
-  <circuit name="main">
+  <circuit name="ALU">
     <a name="appearance" val="custom"/>
-    <a name="circuit" val="main"/>
+    <a name="circuit" val="ALU"/>
     <a name="circuitnamedboxfixedsize" val="true"/>
     <a name="simulationFrequency" val="1.0"/>
     <appear>
-      <polyline fill="none" points="91,30 90,62 111,80 90,100 90,131 141,100 141,60" stroke="#000000"/>
-      <polyline fill="none" points="91,30 141,59" stroke="#000000"/>
-      <text dominant-baseline="central" font-family="SansSerif" font-size="12" text-anchor="middle" x="81" y="40">A</text>
-      <text dominant-baseline="central" font-family="SansSerif" font-size="12" text-anchor="middle" x="80" y="109">B</text>
-      <text dominant-baseline="central" font-family="SansSerif" font-size="12" text-anchor="middle" x="100" y="132">Op</text>
-      <text dominant-baseline="central" font-family="SansSerif" font-size="12" text-anchor="middle" x="153" y="110">Shamt</text>
-      <text dominant-baseline="central" font-family="SansSerif" font-size="12" text-anchor="middle" x="153" y="58">S</text>
-      <text dominant-baseline="central" font-family="SansSerif" font-size="12" text-anchor="middle" x="127" y="32">Zero</text>
+      <polyline fill="none" points="91,30 90,62 111,80 90,100 90,131 141,100 141,60" stroke="#000000" stroke-width="3"/>
+      <polyline fill="none" points="91,30 141,59" stroke="#000000" stroke-width="3"/>
+      <text dominant-baseline="central" font-family="SansSerif" font-size="14" font-weight="bold" text-anchor="middle" x="81" y="40">A</text>
+      <text dominant-baseline="central" font-family="SansSerif" font-size="14" font-weight="bold" text-anchor="middle" x="80" y="109">B</text>
+      <text dominant-baseline="central" font-family="SansSerif" font-size="14" font-weight="bold" text-anchor="middle" x="100" y="132">Op</text>
+      <text dominant-baseline="central" font-family="SansSerif" font-size="14" font-weight="bold" text-anchor="middle" x="153" y="110">Shamt</text>
+      <text dominant-baseline="central" font-family="SansSerif" font-size="14" font-weight="bold" text-anchor="middle" x="153" y="58">S</text>
+      <text dominant-baseline="central" font-family="SansSerif" font-size="14" font-weight="bold" text-anchor="middle" x="127" y="32">Zero</text>
       <circ-anchor facing="east" x="140" y="70"/>
       <circ-port dir="in" pin="160,130" x="90" y="50"/>
       <circ-port dir="in" pin="160,240" x="90" y="120"/>

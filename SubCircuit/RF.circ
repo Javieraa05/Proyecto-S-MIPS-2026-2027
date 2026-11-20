@@ -23,7 +23,7 @@
   <lib desc="#BFH-Praktika" name="10"/>
   <lib desc="#Input/Output-Extra" name="11"/>
   <lib desc="#Soc" name="12"/>
-  <main name="main"/>
+  <main name="RF"/>
   <options>
     <a name="gateUndefined" val="ignore"/>
     <a name="simlimit" val="1000"/>
@@ -59,24 +59,33 @@
     <tool name="D Flip-Flop"/>
     <tool name="Register"/>
   </toolbar>
-  <circuit name="main">
+  <circuit name="RF">
     <a name="appearance" val="custom"/>
-    <a name="circuit" val="main"/>
+    <a name="circuit" val="RF"/>
     <a name="circuitnamedboxfixedsize" val="true"/>
     <a name="simulationFrequency" val="1.0"/>
     <appear>
-      <rect fill="none" height="130" stroke="#000000" width="151" x="90" y="22"/>
-      <text dominant-baseline="central" font-family="SansSerif" font-size="57" text-anchor="middle" x="169" y="82">RF</text>
-      <circ-anchor facing="east" x="240" y="50"/>
-      <circ-port dir="in" pin="180,220" x="90" y="50"/>
-      <circ-port dir="in" pin="180,260" x="90" y="60"/>
-      <circ-port dir="in" pin="180,300" x="90" y="70"/>
-      <circ-port dir="in" pin="180,340" x="90" y="80"/>
-      <circ-port dir="in" pin="180,380" x="90" y="90"/>
-      <circ-port dir="in" pin="180,420" x="90" y="100"/>
-      <circ-port dir="in" pin="190,150" x="90" y="40"/>
-      <circ-port dir="out" pin="1600,170" x="240" y="50"/>
-      <circ-port dir="out" pin="1600,290" x="240" y="80"/>
+      <text dominant-baseline="central" font-family="SansSerif" font-size="57" text-anchor="middle" x="194" y="46">RF</text>
+      <rect fill="none" height="157" stroke="#000000" width="151" x="89" y="10"/>
+      <text dominant-baseline="central" font-family="SansSerif" font-size="12" text-anchor="middle" x="116" y="29">DInput</text>
+      <text dominant-baseline="central" font-family="SansSerif" font-size="12" text-anchor="middle" x="162" y="155">Reset</text>
+      <text dominant-baseline="central" font-family="SansSerif" font-size="12" text-anchor="middle" x="125" y="49">DAddress</text>
+      <text dominant-baseline="central" font-family="SansSerif" font-size="12" text-anchor="middle" x="111" y="70">SelA</text>
+      <text dominant-baseline="central" font-family="SansSerif" font-size="12" text-anchor="middle" x="111" y="89">SelB</text>
+      <text dominant-baseline="central" font-family="SansSerif" font-size="12" text-anchor="middle" x="112" y="129">R_W</text>
+      <path d="M106,164 Q121,135 134,164" fill="none" stroke="#000000"/>
+      <text dominant-baseline="central" font-family="SansSerif" font-size="12" text-anchor="middle" x="227" y="69">A</text>
+      <text dominant-baseline="central" font-family="SansSerif" font-size="12" text-anchor="middle" x="228" y="99">B</text>
+      <circ-anchor facing="east" x="240" y="70"/>
+      <circ-port dir="in" pin="180,220" x="160" y="170"/>
+      <circ-port dir="in" pin="180,260" x="90" y="130"/>
+      <circ-port dir="in" pin="180,300" x="120" y="170"/>
+      <circ-port dir="in" pin="180,340" x="90" y="50"/>
+      <circ-port dir="in" pin="180,380" x="90" y="70"/>
+      <circ-port dir="in" pin="180,420" x="90" y="90"/>
+      <circ-port dir="in" pin="190,150" x="90" y="30"/>
+      <circ-port dir="out" pin="1600,170" x="240" y="70"/>
+      <circ-port dir="out" pin="1600,290" x="240" y="100"/>
     </appear>
     <comp lib="0" loc="(1040,1050)" name="Tunnel">
       <a name="facing" val="east"/>
@@ -1541,11 +1550,11 @@
       <a name="appearance" val="logisim_evolution"/>
       <a name="width" val="32"/>
     </comp>
-    <comp lib="9" loc="(1525,83)" name="Text">
+    <comp lib="9" loc="(1525,80)" name="Text">
       <a name="font" val="SansSerif bold 22"/>
       <a name="text" val="Output"/>
     </comp>
-    <comp lib="9" loc="(193,77)" name="Text">
+    <comp lib="9" loc="(190,75)" name="Text">
       <a name="font" val="SansSerif bold 22"/>
       <a name="text" val="Input"/>
     </comp>
