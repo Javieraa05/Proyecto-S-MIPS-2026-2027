@@ -54,10 +54,34 @@
     <tool name="Register"/>
   </toolbar>
   <circuit name="Output_Logic">
-    <a name="appearance" val="logisim_evolution"/>
+    <a name="appearance" val="custom"/>
     <a name="circuit" val="Output_Logic"/>
     <a name="circuitnamedboxfixedsize" val="true"/>
     <a name="simulationFrequency" val="1.0"/>
+    <appear>
+      <rect fill="none" height="180" stroke="#000000" stroke-width="2" width="220" x="50" y="50"/>
+      <text dominant-baseline="central" font-family="SansSerif" font-size="15" font-weight="bold" text-anchor="middle" x="163" y="68">OUTPUT LOGIC</text>
+      <circ-anchor facing="east" x="270" y="60"/>
+      <circ-port dir="in" pin="220,130" x="50" y="110"/>
+      <circ-port dir="in" pin="220,200" x="50" y="160"/>
+      <circ-port dir="out" pin="1200,130" x="270" y="160"/>
+      <circ-port dir="out" pin="1200,170" x="270" y="170"/>
+      <circ-port dir="out" pin="1200,90" x="270" y="150"/>
+      <circ-port dir="out" pin="1540,130" x="270" y="210"/>
+      <circ-port dir="out" pin="1540,90" x="270" y="200"/>
+      <circ-port dir="out" pin="1820,130" x="210" y="230"/>
+      <circ-port dir="out" pin="1820,170" x="220" y="230"/>
+      <circ-port dir="out" pin="1820,90" x="200" y="230"/>
+      <circ-port dir="out" pin="2200,130" x="150" y="230"/>
+      <circ-port dir="out" pin="2200,90" x="160" y="230"/>
+      <circ-port dir="out" pin="830,130" x="270" y="70"/>
+      <circ-port dir="out" pin="830,170" x="270" y="80"/>
+      <circ-port dir="out" pin="830,210" x="270" y="90"/>
+      <circ-port dir="out" pin="830,250" x="270" y="100"/>
+      <circ-port dir="out" pin="830,290" x="270" y="110"/>
+      <circ-port dir="out" pin="830,330" x="270" y="120"/>
+      <circ-port dir="out" pin="830,90" x="270" y="60"/>
+    </appear>
     <comp lib="0" loc="(1010,1390)" name="Tunnel">
       <a name="facing" val="east"/>
       <a name="label" val="Branch"/>
@@ -1410,39 +1434,39 @@
     <comp lib="2" loc="(380,590)" name="Demultiplexer">
       <a name="select" val="4"/>
     </comp>
-    <comp lib="9" loc="(1242,1104)" name="Text">
+    <comp lib="9" loc="(1240,1100)" name="Text">
       <a name="text" val="ALU_B_Control"/>
     </comp>
-    <comp lib="9" loc="(1274,471)" name="Text">
+    <comp lib="9" loc="(1270,470)" name="Text">
       <a name="text" val="PC Control"/>
     </comp>
-    <comp lib="9" loc="(1353,27)" name="Text">
+    <comp lib="9" loc="(1350,25)" name="Text">
       <a name="font" val="SansSerif bold 22"/>
       <a name="text" val="Outputs"/>
     </comp>
-    <comp lib="9" loc="(1451,1710)" name="Text">
+    <comp lib="9" loc="(1450,1710)" name="Text">
       <a name="text" val="REG_DST_SEL"/>
     </comp>
-    <comp lib="9" loc="(1944,477)" name="Text">
+    <comp lib="9" loc="(1940,475)" name="Text">
       <a name="text" val="System Control"/>
     </comp>
-    <comp lib="9" loc="(1986,1709)" name="Text">
+    <comp lib="9" loc="(1985,1705)" name="Text">
       <a name="text" val="REG_DATA_SEL"/>
     </comp>
-    <comp lib="9" loc="(225,84)" name="Text">
+    <comp lib="9" loc="(225,80)" name="Text">
       <a name="font" val="SansSerif bold 22"/>
       <a name="text" val="Inputs"/>
     </comp>
-    <comp lib="9" loc="(345,453)" name="Text">
+    <comp lib="9" loc="(345,450)" name="Text">
       <a name="text" val="Instructions and States"/>
     </comp>
-    <comp lib="9" loc="(447,1109)" name="Text">
+    <comp lib="9" loc="(445,1105)" name="Text">
       <a name="text" val="ALU_A_Control"/>
     </comp>
-    <comp lib="9" loc="(492,1643)" name="Text">
+    <comp lib="9" loc="(490,1640)" name="Text">
       <a name="text" val="ALU_OP_SEL"/>
     </comp>
-    <comp lib="9" loc="(847,469)" name="Text">
+    <comp lib="9" loc="(845,465)" name="Text">
       <a name="text" val="WE"/>
     </comp>
     <wire from="(1010,1250)" to="(1050,1250)"/>
