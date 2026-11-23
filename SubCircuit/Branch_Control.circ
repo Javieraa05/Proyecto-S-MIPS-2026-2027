@@ -59,15 +59,28 @@
     <a name="circuitnamedboxfixedsize" val="true"/>
     <a name="simulationFrequency" val="1.0"/>
     <appear>
-      <rect fill="none" height="143" stroke="#000000" stroke-width="2" width="191" x="50" y="28"/>
-      <text dominant-baseline="central" font-family="SansSerif" font-size="63" font-weight="bold" text-anchor="middle" x="143" y="94">BC</text>
-      <circ-anchor facing="east" x="240" y="90"/>
-      <circ-port dir="in" pin="240,180" x="50" y="40"/>
-      <circ-port dir="in" pin="240,220" x="50" y="70"/>
+      <rect height="3" stroke="none" width="10" x="50" y="59"/>
+      <text dominant-baseline="alphabetic" font-family="Dialog" font-size="12" text-anchor="start" x="65" y="64">BRANCH_EN</text>
+      <rect height="3" stroke="none" width="10" x="50" y="79"/>
+      <text dominant-baseline="alphabetic" font-family="Dialog" font-size="12" text-anchor="start" x="65" y="84">PC_WRITE_...</text>
+      <rect height="3" stroke="none" width="10" x="50" y="99"/>
+      <text dominant-baseline="alphabetic" font-family="Dialog" font-size="12" text-anchor="start" x="65" y="104">BEQ</text>
+      <rect height="3" stroke="none" width="10" x="50" y="119"/>
+      <text dominant-baseline="alphabetic" font-family="Dialog" font-size="12" text-anchor="start" x="65" y="124">BNE</text>
+      <rect height="3" stroke="none" width="10" x="50" y="139"/>
+      <text dominant-baseline="alphabetic" font-family="Dialog" font-size="12" text-anchor="start" x="65" y="144">Zero</text>
+      <rect height="3" stroke="none" width="10" x="260" y="59"/>
+      <text dominant-baseline="alphabetic" font-family="Dialog" font-size="12" text-anchor="end" x="255" y="64">PC_WE</text>
+      <rect height="20" stroke="none" width="200" x="60" y="150"/>
+      <rect fill="none" height="120" stroke="#000000" stroke-width="2" width="200" x="60" y="50"/>
+      <text dominant-baseline="alphabetic" fill="#ffffff" font-family="Dialog" font-size="14" font-weight="bold" text-anchor="middle" x="160" y="164">Branch_Control</text>
+      <circ-anchor facing="east" x="270" y="60"/>
+      <circ-port dir="in" pin="240,180" x="50" y="60"/>
+      <circ-port dir="in" pin="240,220" x="50" y="80"/>
       <circ-port dir="in" pin="240,260" x="50" y="100"/>
-      <circ-port dir="in" pin="240,300" x="50" y="130"/>
-      <circ-port dir="in" pin="240,340" x="50" y="160"/>
-      <circ-port dir="out" pin="1160,250" x="240" y="90"/>
+      <circ-port dir="in" pin="240,300" x="50" y="120"/>
+      <circ-port dir="in" pin="240,340" x="50" y="140"/>
+      <circ-port dir="out" pin="1160,250" x="270" y="60"/>
     </appear>
     <comp lib="0" loc="(1070,230)" name="Tunnel">
       <a name="facing" val="east"/>
@@ -176,7 +189,7 @@
     <comp lib="1" loc="(700,440)" name="AND Gate">
       <a name="size" val="30"/>
     </comp>
-    <comp lib="9" loc="(240,129)" name="Text">
+    <comp lib="9" loc="(240,125)" name="Text">
       <a name="font" val="SansSerif bold 22"/>
       <a name="text" val="Inputs"/>
     </comp>

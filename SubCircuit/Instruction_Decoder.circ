@@ -59,14 +59,25 @@
     <a name="circuitnamedboxfixedsize" val="true"/>
     <a name="simulationFrequency" val="1.0"/>
     <appear>
-      <rect fill="none" height="74" stroke="#000000" width="134" x="60" y="36"/>
-      <text dominant-baseline="central" font-family="SansSerif" font-size="12" text-anchor="middle" x="76" y="50">OP</text>
-      <text dominant-baseline="central" font-family="SansSerif" font-size="12" text-anchor="middle" x="79" y="79">Funct</text>
-      <text dominant-baseline="central" font-family="SansSerif" font-size="12" text-anchor="middle" x="172" y="58">Bus</text>
-      <circ-anchor facing="east" x="190" y="60"/>
-      <circ-port dir="in" pin="140,130" x="60" y="50"/>
-      <circ-port dir="in" pin="140,190" x="60" y="80"/>
-      <circ-port dir="out" pin="1250,310" x="190" y="60"/>
+      <rect height="4" stroke="none" width="10" x="50" y="58"/>
+      <text dominant-baseline="alphabetic" font-family="Dialog" font-size="12" text-anchor="start" x="65" y="64">OP</text>
+      <rect height="4" stroke="none" width="10" x="50" y="78"/>
+      <text dominant-baseline="alphabetic" font-family="Dialog" font-size="12" text-anchor="start" x="65" y="84">Funct</text>
+      <rect height="4" stroke="none" width="10" x="260" y="58"/>
+      <text dominant-baseline="alphabetic" font-family="Dialog" font-size="12" text-anchor="end" x="255" y="64">Bus_Instr...</text>
+      <rect height="3" stroke="none" width="10" x="260" y="79"/>
+      <text dominant-baseline="alphabetic" font-family="Dialog" font-size="12" text-anchor="end" x="255" y="84">BEQ</text>
+      <rect height="3" stroke="none" width="10" x="260" y="99"/>
+      <text dominant-baseline="alphabetic" font-family="Dialog" font-size="12" text-anchor="end" x="255" y="104">BNE</text>
+      <rect height="20" stroke="none" width="200" x="60" y="110"/>
+      <rect fill="none" height="80" stroke="#000000" stroke-width="2" width="200" x="60" y="50"/>
+      <text dominant-baseline="alphabetic" fill="#ffffff" font-family="Dialog" font-size="14" font-weight="bold" text-anchor="middle" x="160" y="124">Instruction_Decoder</text>
+      <circ-anchor facing="east" x="270" y="60"/>
+      <circ-port dir="in" pin="140,130" x="50" y="60"/>
+      <circ-port dir="in" pin="140,190" x="50" y="80"/>
+      <circ-port dir="out" pin="1230,1050" x="270" y="80"/>
+      <circ-port dir="out" pin="1230,1080" x="270" y="100"/>
+      <circ-port dir="out" pin="1250,310" x="270" y="60"/>
     </appear>
     <comp lib="0" loc="(110,1040)" name="Tunnel">
       <a name="facing" val="east"/>
@@ -263,11 +274,33 @@
       <a name="label" val="sw"/>
       <a name="labelfont" val="SansSerif bold 10"/>
     </comp>
+    <comp lib="0" loc="(1210,1050)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="label" val="beq"/>
+      <a name="labelfont" val="SansSerif bold 10"/>
+    </comp>
+    <comp lib="0" loc="(1210,1080)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="label" val="bne"/>
+      <a name="labelfont" val="SansSerif bold 10"/>
+    </comp>
     <comp lib="0" loc="(1220,310)" name="Splitter">
       <a name="facing" val="west"/>
       <a name="fanout" val="24"/>
       <a name="incoming" val="24"/>
       <a name="spacing" val="3"/>
+    </comp>
+    <comp lib="0" loc="(1230,1050)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="facing" val="west"/>
+      <a name="label" val="BEQ"/>
+      <a name="type" val="output"/>
+    </comp>
+    <comp lib="0" loc="(1230,1080)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="facing" val="west"/>
+      <a name="label" val="BNE"/>
+      <a name="type" val="output"/>
     </comp>
     <comp lib="0" loc="(1250,310)" name="Pin">
       <a name="appearance" val="classic"/>
@@ -897,6 +930,8 @@
     <wire from="(1160,920)" to="(1200,920)"/>
     <wire from="(1160,950)" to="(1200,950)"/>
     <wire from="(1160,980)" to="(1200,980)"/>
+    <wire from="(1210,1050)" to="(1230,1050)"/>
+    <wire from="(1210,1080)" to="(1230,1080)"/>
     <wire from="(1220,310)" to="(1250,310)"/>
     <wire from="(140,130)" to="(180,130)"/>
     <wire from="(140,190)" to="(180,190)"/>
