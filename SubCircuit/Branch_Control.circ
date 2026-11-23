@@ -54,9 +54,148 @@
     <tool name="Register"/>
   </toolbar>
   <circuit name="Branch_Control">
-    <a name="appearance" val="logisim_evolution"/>
+    <a name="appearance" val="custom"/>
     <a name="circuit" val="Branch_Control"/>
     <a name="circuitnamedboxfixedsize" val="true"/>
     <a name="simulationFrequency" val="1.0"/>
+    <appear>
+      <rect fill="none" height="143" stroke="#000000" stroke-width="2" width="191" x="50" y="28"/>
+      <text dominant-baseline="central" font-family="SansSerif" font-size="63" font-weight="bold" text-anchor="middle" x="143" y="94">BC</text>
+      <circ-anchor facing="east" x="240" y="90"/>
+      <circ-port dir="in" pin="240,180" x="50" y="40"/>
+      <circ-port dir="in" pin="240,220" x="50" y="70"/>
+      <circ-port dir="in" pin="240,260" x="50" y="100"/>
+      <circ-port dir="in" pin="240,300" x="50" y="130"/>
+      <circ-port dir="in" pin="240,340" x="50" y="160"/>
+      <circ-port dir="out" pin="1160,250" x="240" y="90"/>
+    </appear>
+    <comp lib="0" loc="(1070,230)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="label" val="PC_WRITE_DIRECT"/>
+    </comp>
+    <comp lib="0" loc="(1070,270)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="label" val="BRANCH_TAKEN"/>
+    </comp>
+    <comp lib="0" loc="(1160,250)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="facing" val="west"/>
+      <a name="label" val="PC_WE"/>
+      <a name="type" val="output"/>
+    </comp>
+    <comp lib="0" loc="(240,180)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="label" val="BRANCH_EN"/>
+    </comp>
+    <comp lib="0" loc="(240,220)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="label" val="PC_WRITE_DIRECT"/>
+    </comp>
+    <comp lib="0" loc="(240,260)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="label" val="BEQ"/>
+    </comp>
+    <comp lib="0" loc="(240,300)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="label" val="BNE"/>
+    </comp>
+    <comp lib="0" loc="(240,340)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="label" val="Zero"/>
+    </comp>
+    <comp lib="0" loc="(270,180)" name="Tunnel">
+      <a name="label" val="BRANCH_EN"/>
+    </comp>
+    <comp lib="0" loc="(270,220)" name="Tunnel">
+      <a name="label" val="PC_WRITE_DIRECT"/>
+    </comp>
+    <comp lib="0" loc="(270,260)" name="Tunnel">
+      <a name="label" val="BEQ"/>
+    </comp>
+    <comp lib="0" loc="(270,300)" name="Tunnel">
+      <a name="label" val="BNE"/>
+    </comp>
+    <comp lib="0" loc="(270,340)" name="Tunnel">
+      <a name="label" val="Zero"/>
+    </comp>
+    <comp lib="0" loc="(560,420)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="label" val="TAKEN_BEQ"/>
+      <a name="labelfont" val="SansSerif bold 10"/>
+    </comp>
+    <comp lib="0" loc="(560,440)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="label" val="TAKEN_BNE"/>
+      <a name="labelfont" val="SansSerif bold 10"/>
+    </comp>
+    <comp lib="0" loc="(610,170)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="label" val="BEQ"/>
+      <a name="labelfont" val="SansSerif bold 10"/>
+    </comp>
+    <comp lib="0" loc="(610,190)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="label" val="Zero"/>
+      <a name="labelfont" val="SansSerif bold 10"/>
+    </comp>
+    <comp lib="0" loc="(610,280)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="label" val="BNE"/>
+      <a name="labelfont" val="SansSerif bold 10"/>
+    </comp>
+    <comp lib="0" loc="(610,300)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="label" val="Zero"/>
+      <a name="labelfont" val="SansSerif bold 10"/>
+    </comp>
+    <comp lib="0" loc="(660,450)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="label" val="BRANCH_EN"/>
+      <a name="labelfont" val="SansSerif bold 10"/>
+    </comp>
+    <comp lib="0" loc="(680,180)" name="Tunnel">
+      <a name="label" val="TAKEN_BEQ"/>
+    </comp>
+    <comp lib="0" loc="(680,290)" name="Tunnel">
+      <a name="label" val="TAKEN_BNE"/>
+    </comp>
+    <comp lib="0" loc="(720,440)" name="Tunnel">
+      <a name="label" val="BRANCH_TAKEN"/>
+    </comp>
+    <comp lib="1" loc="(1130,250)" name="OR Gate"/>
+    <comp lib="1" loc="(590,430)" name="OR Gate">
+      <a name="size" val="30"/>
+    </comp>
+    <comp lib="1" loc="(660,180)" name="AND Gate">
+      <a name="size" val="30"/>
+    </comp>
+    <comp lib="1" loc="(660,290)" name="AND Gate">
+      <a name="negate1" val="true"/>
+      <a name="size" val="30"/>
+    </comp>
+    <comp lib="1" loc="(700,440)" name="AND Gate">
+      <a name="size" val="30"/>
+    </comp>
+    <comp lib="9" loc="(240,129)" name="Text">
+      <a name="font" val="SansSerif bold 22"/>
+      <a name="text" val="Inputs"/>
+    </comp>
+    <wire from="(1070,230)" to="(1080,230)"/>
+    <wire from="(1070,270)" to="(1080,270)"/>
+    <wire from="(1130,250)" to="(1160,250)"/>
+    <wire from="(240,180)" to="(270,180)"/>
+    <wire from="(240,220)" to="(270,220)"/>
+    <wire from="(240,260)" to="(270,260)"/>
+    <wire from="(240,300)" to="(270,300)"/>
+    <wire from="(240,340)" to="(270,340)"/>
+    <wire from="(590,430)" to="(670,430)"/>
+    <wire from="(610,170)" to="(630,170)"/>
+    <wire from="(610,190)" to="(630,190)"/>
+    <wire from="(610,280)" to="(630,280)"/>
+    <wire from="(610,300)" to="(620,300)"/>
+    <wire from="(660,180)" to="(680,180)"/>
+    <wire from="(660,290)" to="(680,290)"/>
+    <wire from="(660,450)" to="(670,450)"/>
+    <wire from="(700,440)" to="(720,440)"/>
   </circuit>
 </project>
