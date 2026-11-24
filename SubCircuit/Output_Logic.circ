@@ -1052,6 +1052,10 @@
     <comp lib="0" loc="(430,780)" name="Tunnel">
       <a name="label" val="Branch"/>
     </comp>
+    <comp lib="0" loc="(440,1240)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="label" val="C_PC"/>
+    </comp>
     <comp lib="0" loc="(440,520)" name="Tunnel">
       <a name="label" val="S1"/>
       <a name="labelfont" val="SansSerif bold 10"/>
@@ -1116,6 +1120,10 @@
       <a name="label" val="S14"/>
       <a name="labelfont" val="SansSerif bold 10"/>
     </comp>
+    <comp lib="0" loc="(480,1260)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="label" val="C_A"/>
+    </comp>
     <comp lib="0" loc="(480,1290)" name="Tunnel">
       <a name="facing" val="east"/>
       <a name="label" val="C_ZERO"/>
@@ -1129,10 +1137,6 @@
       <a name="facing" val="east"/>
       <a name="label" val="C_SLT"/>
       <a name="labelfont" val="SansSerif bold 10"/>
-    </comp>
-    <comp lib="0" loc="(550,1250)" name="Tunnel">
-      <a name="facing" val="east"/>
-      <a name="label" val="C_A"/>
     </comp>
     <comp lib="0" loc="(550,1320)" name="Tunnel">
       <a name="facing" val="east"/>
@@ -1597,6 +1601,10 @@
     <comp lib="1" loc="(420,780)" name="OR Gate">
       <a name="size" val="30"/>
     </comp>
+    <comp lib="1" loc="(570,1250)" name="AND Gate">
+      <a name="negate0" val="true"/>
+      <a name="size" val="30"/>
+    </comp>
     <comp lib="1" loc="(640,1260)" name="OR Gate">
       <a name="size" val="30"/>
     </comp>
@@ -1887,6 +1895,8 @@
     <wire from="(420,650)" to="(470,650)"/>
     <wire from="(420,660)" to="(440,660)"/>
     <wire from="(420,780)" to="(430,780)"/>
+    <wire from="(440,1240)" to="(530,1240)"/>
+    <wire from="(480,1260)" to="(540,1260)"/>
     <wire from="(480,1290)" to="(500,1290)"/>
     <wire from="(500,1270)" to="(500,1290)"/>
     <wire from="(500,1270)" to="(610,1270)"/>
@@ -1894,8 +1904,8 @@
     <wire from="(500,1340)" to="(610,1340)"/>
     <wire from="(540,1880)" to="(660,1880)"/>
     <wire from="(540,1950)" to="(660,1950)"/>
-    <wire from="(550,1250)" to="(610,1250)"/>
     <wire from="(550,1320)" to="(610,1320)"/>
+    <wire from="(570,1250)" to="(610,1250)"/>
     <wire from="(590,1870)" to="(660,1870)"/>
     <wire from="(590,1940)" to="(660,1940)"/>
     <wire from="(600,2000)" to="(660,2000)"/>

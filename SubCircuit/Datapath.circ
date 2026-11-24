@@ -23,8 +23,8 @@
   <lib desc="#BFH-Praktika" name="10"/>
   <lib desc="#Input/Output-Extra" name="11"/>
   <lib desc="#Soc" name="12"/>
-  <lib desc="file#RF.circ" name="13"/>
-  <lib desc="file#ALU.circ" name="14"/>
+  <lib desc="file#ALU.circ" name="13"/>
+  <lib desc="file#RF.circ" name="14"/>
   <main name="Datapath"/>
   <options>
     <a name="gateUndefined" val="ignore"/>
@@ -128,6 +128,8 @@
       <text dominant-baseline="alphabetic" font-family="Dialog" font-size="12" text-anchor="end" x="255" y="164">Service_11</text>
       <rect height="3" stroke="none" width="10" x="260" y="179"/>
       <text dominant-baseline="alphabetic" font-family="Dialog" font-size="12" text-anchor="end" x="255" y="184">ZERO</text>
+      <rect height="4" stroke="none" width="10" x="260" y="198"/>
+      <text dominant-baseline="alphabetic" font-family="Dialog" font-size="12" text-anchor="end" x="255" y="204">Intruction</text>
       <rect height="20" stroke="none" width="200" x="60" y="510"/>
       <rect fill="none" height="480" stroke="#000000" stroke-width="2" width="200" x="60" y="50"/>
       <text dominant-baseline="alphabetic" fill="#ffffff" font-family="Dialog" font-size="14" font-weight="bold" text-anchor="middle" x="160" y="524">Datapath</text>
@@ -162,6 +164,7 @@
       <circ-port dir="out" pin="3100,550" x="270" y="140"/>
       <circ-port dir="out" pin="3100,620" x="270" y="160"/>
       <circ-port dir="out" pin="3100,680" x="270" y="180"/>
+      <circ-port dir="out" pin="3100,760" x="270" y="200"/>
     </appear>
     <comp lib="0" loc="(1190,200)" name="Tunnel">
       <a name="facing" val="east"/>
@@ -1438,6 +1441,12 @@
       <a name="facing" val="east"/>
       <a name="label" val="ZERO"/>
     </comp>
+    <comp lib="0" loc="(3080,760)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="label" val="IR"/>
+      <a name="labelfont" val="SansSerif bold 12"/>
+      <a name="width" val="32"/>
+    </comp>
     <comp lib="0" loc="(3100,220)" name="Pin">
       <a name="appearance" val="classic"/>
       <a name="facing" val="west"/>
@@ -1483,6 +1492,13 @@
       <a name="facing" val="west"/>
       <a name="label" val="ZERO"/>
       <a name="type" val="output"/>
+    </comp>
+    <comp lib="0" loc="(3100,760)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="facing" val="west"/>
+      <a name="label" val="Intruction"/>
+      <a name="type" val="output"/>
+      <a name="width" val="32"/>
     </comp>
     <comp lib="0" loc="(600,550)" name="Tunnel">
       <a name="facing" val="east"/>
@@ -1920,8 +1936,8 @@
     <comp lib="1" loc="(2660,960)" name="OR Gate">
       <a name="size" val="30"/>
     </comp>
-    <comp lib="13" loc="(1520,380)" name="RF"/>
-    <comp lib="14" loc="(890,280)" name="ALU"/>
+    <comp lib="13" loc="(890,280)" name="ALU"/>
+    <comp lib="14" loc="(1520,380)" name="RF"/>
     <comp lib="2" loc="(1280,240)" name="Multiplexer">
       <a name="select" val="2"/>
       <a name="width" val="32"/>
@@ -2237,6 +2253,7 @@
     <wire from="(3080,550)" to="(3100,550)"/>
     <wire from="(3080,620)" to="(3100,620)"/>
     <wire from="(3080,680)" to="(3100,680)"/>
+    <wire from="(3080,760)" to="(3100,760)"/>
     <wire from="(600,550)" to="(620,550)"/>
     <wire from="(620,550)" to="(620,580)"/>
     <wire from="(630,630)" to="(640,630)"/>

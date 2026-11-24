@@ -14,11 +14,11 @@
   <lib desc="#Memory" name="5"/>
   <lib desc="#I/O" name="6"/>
   <lib desc="#Base" name="7"/>
-  <lib desc="file#..\SubCircuit\Datapath.circ" name="8"/>
-  <lib desc="file#..\SubCircuit\Control_Unit.circ" name="9"/>
-  <lib desc="file#..\SubCircuit\Instruction_Decoder.circ" name="10"/>
-  <lib desc="file#..\SubCircuit\Instruction_Spliner.circ" name="11"/>
-  <lib desc="file#..\SubCircuit\Branch_Control.circ" name="12"/>
+  <lib desc="file#..\SubCircuit\Instruction_Spliner.circ" name="8"/>
+  <lib desc="file#..\SubCircuit\Datapath.circ" name="9"/>
+  <lib desc="file#..\SubCircuit\Control_Unit.circ" name="10"/>
+  <lib desc="file#..\SubCircuit\Branch_Control.circ" name="11"/>
+  <lib desc="file#..\SubCircuit\Instruction_Decoder.circ" name="12"/>
   <main name="Board"/>
   <options>
     <a name="gateUndefined" val="ignore"/>
@@ -63,6 +63,11 @@
       <a name="label" val="MEM_RDATA"/>
       <a name="labelfont" val="SansSerif plain 12"/>
       <a name="width" val="32"/>
+    </comp>
+    <comp lib="0" loc="(1220,210)" name="Probe">
+      <a name="appearance" val="NewPins"/>
+      <a name="facing" val="north"/>
+      <a name="radix" val="16"/>
     </comp>
     <comp lib="0" loc="(150,160)" name="Tunnel">
       <a name="label" val="CLK"/>
@@ -141,6 +146,11 @@
       <a name="label" val="HALT"/>
       <a name="labelfont" val="SansSerif plain 12"/>
     </comp>
+    <comp lib="0" loc="(770,240)" name="Probe">
+      <a name="appearance" val="NewPins"/>
+      <a name="facing" val="north"/>
+      <a name="radix" val="16"/>
+    </comp>
     <comp lib="0" loc="(930,160)" name="Tunnel">
       <a name="facing" val="east"/>
       <a name="label" val="CLK"/>
@@ -194,9 +204,13 @@
     </comp>
     <comp loc="(400,140)" name="CPU"/>
     <comp loc="(960,140)" name="Memory"/>
-    <wire from="(1180,160)" to="(1210,160)"/>
+    <wire from="(1180,160)" to="(1190,160)"/>
+    <wire from="(1190,160)" to="(1190,180)"/>
+    <wire from="(1190,160)" to="(1210,160)"/>
+    <wire from="(1190,180)" to="(1220,180)"/>
     <wire from="(120,160)" to="(150,160)"/>
     <wire from="(120,240)" to="(150,240)"/>
+    <wire from="(1220,180)" to="(1220,210)"/>
     <wire from="(370,160)" to="(400,160)"/>
     <wire from="(370,200)" to="(400,200)"/>
     <wire from="(370,240)" to="(400,240)"/>
@@ -208,13 +222,17 @@
     <wire from="(410,620)" to="(420,620)"/>
     <wire from="(430,630)" to="(430,700)"/>
     <wire from="(440,630)" to="(440,740)"/>
-    <wire from="(620,160)" to="(650,160)"/>
+    <wire from="(620,160)" to="(640,160)"/>
     <wire from="(620,200)" to="(650,200)"/>
     <wire from="(620,240)" to="(650,240)"/>
     <wire from="(620,280)" to="(650,280)"/>
     <wire from="(620,320)" to="(650,320)"/>
     <wire from="(620,360)" to="(650,360)"/>
     <wire from="(620,400)" to="(650,400)"/>
+    <wire from="(640,160)" to="(640,180)"/>
+    <wire from="(640,160)" to="(650,160)"/>
+    <wire from="(640,180)" to="(770,180)"/>
+    <wire from="(770,180)" to="(770,240)"/>
     <wire from="(930,160)" to="(960,160)"/>
     <wire from="(930,200)" to="(960,200)"/>
     <wire from="(930,240)" to="(960,240)"/>
@@ -355,7 +373,8 @@
     </comp>
     <comp lib="0" loc="(120,680)" name="Tunnel">
       <a name="facing" val="east"/>
-      <a name="label" val="MEM_RDATA"/>
+      <a name="label" val="INSTRUCTION"/>
+      <a name="labelfont" val="SansSerif bold 10"/>
       <a name="width" val="32"/>
     </comp>
     <comp lib="0" loc="(1270,760)" name="Tunnel">
@@ -541,6 +560,11 @@
       <a name="label" val="ZERO"/>
       <a name="labelfont" val="SansSerif bold 10"/>
     </comp>
+    <comp lib="0" loc="(1980,820)" name="Tunnel">
+      <a name="label" val="INSTRUCTION"/>
+      <a name="labelfont" val="SansSerif bold 10"/>
+      <a name="width" val="32"/>
+    </comp>
     <comp lib="0" loc="(230,140)" name="Pin">
       <a name="appearance" val="classic"/>
       <a name="label" val="CLK"/>
@@ -556,6 +580,11 @@
       <a name="label" val="MEM_RDATA"/>
       <a name="labelfont" val="SansSerif plain 12"/>
       <a name="width" val="32"/>
+    </comp>
+    <comp lib="0" loc="(250,310)" name="Probe">
+      <a name="appearance" val="NewPins"/>
+      <a name="facing" val="north"/>
+      <a name="radix" val="16"/>
     </comp>
     <comp lib="0" loc="(260,140)" name="Tunnel">
       <a name="label" val="CLK"/>
@@ -687,9 +716,9 @@
       <a name="labelloc" val="east"/>
       <a name="type" val="output"/>
     </comp>
-    <comp lib="10" loc="(660,680)" name="Instruction_Decoder"/>
-    <comp lib="11" loc="(360,680)" name="Instruction_Spliner"/>
-    <comp lib="12" loc="(1520,680)" name="Branch_Control"/>
+    <comp lib="10" loc="(1010,680)" name="Control_Unit"/>
+    <comp lib="11" loc="(1520,680)" name="Branch_Control"/>
+    <comp lib="12" loc="(660,680)" name="Instruction_Decoder"/>
     <comp lib="7" loc="(500,40)" name="Text">
       <a name="font" val="SansSerif bold 20"/>
       <a name="text" val="CPU S-MIPS: implementar aqui"/>
@@ -698,8 +727,8 @@
       <a name="font" val="SansSerif plain 12"/>
       <a name="text" val="No cambiar nombres, anchos ni sentido de los pines: la placa depende de ellos."/>
     </comp>
-    <comp lib="8" loc="(1940,680)" name="Datapath"/>
-    <comp lib="9" loc="(1010,680)" name="Control_Unit"/>
+    <comp lib="8" loc="(360,680)" name="Instruction_Spliner"/>
+    <comp lib="9" loc="(1940,680)" name="Datapath"/>
     <wire from="(1010,1000)" to="(1040,1000)"/>
     <wire from="(1010,1020)" to="(1040,1020)"/>
     <wire from="(1010,1040)" to="(1040,1040)"/>
@@ -761,9 +790,12 @@
     <wire from="(1940,760)" to="(1980,760)"/>
     <wire from="(1940,780)" to="(1980,780)"/>
     <wire from="(1940,800)" to="(1980,800)"/>
+    <wire from="(1940,820)" to="(1980,820)"/>
     <wire from="(230,140)" to="(260,140)"/>
     <wire from="(230,190)" to="(260,190)"/>
-    <wire from="(230,260)" to="(270,260)"/>
+    <wire from="(230,260)" to="(250,260)"/>
+    <wire from="(250,260)" to="(250,310)"/>
+    <wire from="(250,260)" to="(270,260)"/>
     <wire from="(360,680)" to="(440,680)"/>
     <wire from="(360,780)" to="(430,780)"/>
     <wire from="(430,700)" to="(430,780)"/>
