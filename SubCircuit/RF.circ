@@ -789,10 +789,6 @@
       <a name="facing" val="north"/>
       <a name="label" val="R"/>
     </comp>
-    <comp lib="0" loc="(580,180)" name="Tunnel">
-      <a name="facing" val="north"/>
-      <a name="label" val="R"/>
-    </comp>
     <comp lib="0" loc="(580,310)" name="Tunnel">
       <a name="facing" val="north"/>
       <a name="label" val="R"/>

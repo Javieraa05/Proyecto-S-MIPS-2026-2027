@@ -14,11 +14,11 @@
   <lib desc="#Memory" name="5"/>
   <lib desc="#I/O" name="6"/>
   <lib desc="#Base" name="7"/>
-  <lib desc="file#..\SubCircuit\Instruction_Spliner.circ" name="8"/>
-  <lib desc="file#..\SubCircuit\Datapath.circ" name="9"/>
-  <lib desc="file#..\SubCircuit\Control_Unit.circ" name="10"/>
-  <lib desc="file#..\SubCircuit\Branch_Control.circ" name="11"/>
-  <lib desc="file#..\SubCircuit\Instruction_Decoder.circ" name="12"/>
+  <lib desc="file#..\SubCircuit\Control_Unit.circ" name="8"/>
+  <lib desc="file#..\SubCircuit\Instruction_Spliner.circ" name="9"/>
+  <lib desc="file#..\SubCircuit\Instruction_Decoder.circ" name="10"/>
+  <lib desc="file#..\SubCircuit\Datapath.circ" name="11"/>
+  <lib desc="file#..\SubCircuit\Branch_Control.circ" name="12"/>
   <main name="Board"/>
   <options>
     <a name="gateUndefined" val="ignore"/>
@@ -54,7 +54,7 @@
   </toolbar>
   <circuit name="Board">
     <a name="circuit" val="Board"/>
-    <a name="simulationFrequency" val="1.0"/>
+    <a name="simulationFrequency" val="2048000.0"/>
     <comp lib="0" loc="(120,160)" name="Clock">
       <a name="appearance" val="classic"/>
       <a name="label" val="Reloj"/>
@@ -716,9 +716,9 @@
       <a name="labelloc" val="east"/>
       <a name="type" val="output"/>
     </comp>
-    <comp lib="10" loc="(1010,680)" name="Control_Unit"/>
-    <comp lib="11" loc="(1520,680)" name="Branch_Control"/>
-    <comp lib="12" loc="(660,680)" name="Instruction_Decoder"/>
+    <comp lib="10" loc="(660,680)" name="Instruction_Decoder"/>
+    <comp lib="11" loc="(1940,680)" name="Datapath"/>
+    <comp lib="12" loc="(1520,680)" name="Branch_Control"/>
     <comp lib="7" loc="(500,40)" name="Text">
       <a name="font" val="SansSerif bold 20"/>
       <a name="text" val="CPU S-MIPS: implementar aqui"/>
@@ -727,8 +727,8 @@
       <a name="font" val="SansSerif plain 12"/>
       <a name="text" val="No cambiar nombres, anchos ni sentido de los pines: la placa depende de ellos."/>
     </comp>
-    <comp lib="8" loc="(360,680)" name="Instruction_Spliner"/>
-    <comp lib="9" loc="(1940,680)" name="Datapath"/>
+    <comp lib="8" loc="(1010,680)" name="Control_Unit"/>
+    <comp lib="9" loc="(360,680)" name="Instruction_Spliner"/>
     <wire from="(1010,1000)" to="(1040,1000)"/>
     <wire from="(1010,1020)" to="(1040,1020)"/>
     <wire from="(1010,1040)" to="(1040,1040)"/>
