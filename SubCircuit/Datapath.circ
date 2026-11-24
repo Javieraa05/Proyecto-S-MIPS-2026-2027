@@ -23,8 +23,8 @@
   <lib desc="#BFH-Praktika" name="10"/>
   <lib desc="#Input/Output-Extra" name="11"/>
   <lib desc="#Soc" name="12"/>
-  <lib desc="file#RF.circ" name="13"/>
-  <lib desc="file#ALU.circ" name="14"/>
+  <lib desc="file#ALU.circ" name="13"/>
+  <lib desc="file#RF.circ" name="14"/>
   <main name="Datapath"/>
   <options>
     <a name="gateUndefined" val="ignore"/>
@@ -229,7 +229,7 @@
     </comp>
     <comp lib="0" loc="(1350,770)" name="Tunnel">
       <a name="facing" val="east"/>
-      <a name="label" val="MDR"/>
+      <a name="label" val="MDR_0"/>
       <a name="labelfont" val="SansSerif bold 12"/>
       <a name="width" val="32"/>
     </comp>
@@ -1936,8 +1936,8 @@
     <comp lib="1" loc="(2660,960)" name="OR Gate">
       <a name="size" val="30"/>
     </comp>
-    <comp lib="13" loc="(1520,380)" name="RF"/>
-    <comp lib="14" loc="(890,280)" name="ALU"/>
+    <comp lib="13" loc="(890,280)" name="ALU"/>
+    <comp lib="14" loc="(1520,380)" name="RF"/>
     <comp lib="2" loc="(1280,240)" name="Multiplexer">
       <a name="select" val="2"/>
       <a name="width" val="32"/>
