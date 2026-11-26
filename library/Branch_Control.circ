@@ -189,6 +189,10 @@
     <comp lib="1" loc="(700,440)" name="AND Gate">
       <a name="size" val="30"/>
     </comp>
+    <comp lib="9" loc="(1084,138)" name="Text">
+      <a name="font" val="SansSerif bold 22"/>
+      <a name="text" val="Outputs"/>
+    </comp>
     <comp lib="9" loc="(240,125)" name="Text">
       <a name="font" val="SansSerif bold 22"/>
       <a name="text" val="Inputs"/>

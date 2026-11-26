@@ -1645,12 +1645,12 @@
     <comp lib="9" loc="(1270,470)" name="Text">
       <a name="text" val="PC Control"/>
     </comp>
-    <comp lib="9" loc="(1350,25)" name="Text">
-      <a name="font" val="SansSerif bold 22"/>
-      <a name="text" val="Outputs"/>
-    </comp>
     <comp lib="9" loc="(1450,1710)" name="Text">
       <a name="text" val="REG_DST_SEL"/>
+    </comp>
+    <comp lib="9" loc="(1812,44)" name="Text">
+      <a name="font" val="SansSerif bold 22"/>
+      <a name="text" val="Outputs"/>
     </comp>
     <comp lib="9" loc="(1940,475)" name="Text">
       <a name="text" val="System Control"/>
