@@ -531,7 +531,7 @@
     </comp>
     <comp lib="0" loc="(220,150)" name="Pin">
       <a name="appearance" val="classic"/>
-      <a name="label" val="Bus_Intructions"/>
+      <a name="label" val="Bus_Instructions"/>
       <a name="width" val="24"/>
     </comp>
     <comp lib="0" loc="(220,230)" name="Pin">
@@ -619,7 +619,7 @@
       <a name="font" val="SansSerif bold 22"/>
       <a name="text" val="Inputs"/>
     </comp>
-    <comp lib="9" loc="(2104,61)" name="Text">
+    <comp lib="9" loc="(2100,60)" name="Text">
       <a name="font" val="SansSerif bold 22"/>
       <a name="text" val="Outputs"/>
     </comp>
